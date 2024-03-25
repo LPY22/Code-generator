@@ -6,8 +6,9 @@
   "author": "lpy",
   "createTime": "2024-03-18",
   "fileConfig": {
-    "inputRootPath": "D:/桌面文件/java_exercise/Code-generator/code-demo-projects/acm-template-pro",
+    "inputRootPath": ".source/acm-template-pro",
     "outputRootPath": "generated",
+    "sourceRootPath": "D:/桌面文件/java_exercise/Code-generator/code-demo-projects/acm-template-pro",
     "type": "dir",
     "files": [{
       "inputPath": "src/com/lpy/acm/MainTemplate.java.ftl",

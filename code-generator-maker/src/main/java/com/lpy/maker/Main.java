@@ -1,12 +1,16 @@
 package com.lpy.maker;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import com.lpy.maker.generator.main.GenerateTemplate;
+import com.lpy.maker.generator.main.ZipGenerator;
+import freemarker.template.TemplateException;
+
+import java.io.IOException;
 
 public class Main {
     //这里用作命令行项目的全局调用入口
-    public static void main(String[] args) {
+    public static void main(String[] args) throws TemplateException, IOException, InterruptedException {
+        GenerateTemplate generatorTemplate = new ZipGenerator();
+        generatorTemplate.doGenerate();
 //直接调用工具完成整个目录的复制生成
 /*        //获取整个项目的根路径
         String projectPath = System.getProperty("user.dir");
@@ -21,7 +25,7 @@ public class Main {
 //        args = new String[]{"generate","-l","-o"};
 //        args = new String[]{"config"};
 //        args = new String[]{"list"};
-        List<String> completeArgs = new ArrayList<>(Arrays.asList(args));
+//        List<String> completeArgs = new ArrayList<>(Arrays.asList(args));
 //        if(completeArgs.stream().anyMatch(s->"generate".equals(s)))
 //        {
 //            Field[] fields = ReflectUtil.getFields(GenerateCommand.class);

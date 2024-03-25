@@ -32,7 +32,7 @@ public class Meta {
     @NoArgsConstructor
     @Data
     public static class FileConfig {
-        /**
+        /**加了个sourceRootPath
          * inputRootPath : D:/桌面文件/ava_exercise/Code-generator/code-demo-projects/acm-template-pro
          * outputRootPath : generated
          * type : dir
@@ -41,6 +41,7 @@ public class Meta {
 
         private String inputRootPath;
         private String outputRootPath;
+        private String sourceRootPath;
         private String type;
         private List<FileInfo> files;
 
