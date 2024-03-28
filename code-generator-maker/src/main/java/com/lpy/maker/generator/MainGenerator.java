@@ -87,8 +87,8 @@ public class MainGenerator {
         DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
 
         // generator.MainGenerator
-        inputFilePath = inputResourcePath + File.separator + "templates/java/generator/FileGenerator.java.ftl";
-        outputFilePath = outputBaseJavaPackagePath + "/generator/FileGenerator.java";
+        inputFilePath = inputResourcePath + File.separator + "templates/java/generator/MainGenerator.java.ftl";
+        outputFilePath = outputBaseJavaPackagePath + "/generator/MainGenerator.java";
         DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
 
         // generator.StaticGenerator

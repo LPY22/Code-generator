@@ -1,9 +1,11 @@
 D:\桌面文件\java_exercise\Code-generator\code-generator-maker\generated\acm_template_pro_generator\src\main\java\com\lpy\cli\CommandExecutor.java
 D:\桌面文件\java_exercise\Code-generator\code-generator-maker\generated\acm_template_pro_generator\src\main\java\com\lpy\cli\command\ConfigCommand.java
-D:\桌面文件\java_exercise\Code-generator\code-generator-maker\generated\acm_template_pro_generator\src\main\java\com\lpy\generator\FileGenerator.java
+D:\桌面文件\java_exercise\Code-generator\code-generator-maker\generated\acm_template_pro_generator\src\main\java\com\lpy\cli\command\TestArgGroupCommand.java
 D:\桌面文件\java_exercise\Code-generator\code-generator-maker\generated\acm_template_pro_generator\src\main\java\com\lpy\Main.java
 D:\桌面文件\java_exercise\Code-generator\code-generator-maker\generated\acm_template_pro_generator\src\main\java\com\lpy\model\DataModel.java
 D:\桌面文件\java_exercise\Code-generator\code-generator-maker\generated\acm_template_pro_generator\src\main\java\com\lpy\cli\command\GenerateCommand.java
 D:\桌面文件\java_exercise\Code-generator\code-generator-maker\generated\acm_template_pro_generator\src\main\java\com\lpy\cli\command\ListCommand.java
+D:\桌面文件\java_exercise\Code-generator\code-generator-maker\generated\acm_template_pro_generator\src\main\java\com\lpy\cli\command\TestGroupCommand.java
 D:\桌面文件\java_exercise\Code-generator\code-generator-maker\generated\acm_template_pro_generator\src\main\java\com\lpy\generator\DynamicFileGenerator.java
+D:\桌面文件\java_exercise\Code-generator\code-generator-maker\generated\acm_template_pro_generator\src\main\java\com\lpy\generator\MainGenerator.java
 D:\桌面文件\java_exercise\Code-generator\code-generator-maker\generated\acm_template_pro_generator\src\main\java\com\lpy\generator\StaticFileGenerator.java

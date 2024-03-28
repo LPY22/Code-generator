@@ -1,4 +1,4 @@
-package com.lpy.generator.file;
+package com.lpy.generator;
 
 import cn.hutool.core.io.FileUtil;
 import freemarker.template.Configuration;

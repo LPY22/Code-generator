@@ -9,8 +9,8 @@ import java.io.IOException;
 /**
  * 核心生成器
  */
-public class FileGenerator {
-    public static void doGenerate(Object model) throws TemplateException, IOException {
+public class MainGenerator {
+    public static void doGenerate(DataModel model) throws TemplateException, IOException {
         //得到整个项目的根路径
         String projectPath= System.getProperty("user.dir");
         File parentFile = new File(projectPath).getParentFile();

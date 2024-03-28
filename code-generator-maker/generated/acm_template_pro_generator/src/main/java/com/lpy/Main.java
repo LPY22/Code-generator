@@ -13,6 +13,7 @@ import java.util.List;
 public class Main {
     //这里用作命令行项目的全局调用入口
     public static void main(String[] args) {
+        args = new String[]{"generate","-l"};
         List<String> completeArgs = new ArrayList<>(Arrays.asList(args));
         if(completeArgs.stream().anyMatch(s->"generate".equals(s)))
         {

@@ -1,22 +1,37 @@
 package com.lpy.model;
 
 import lombok.Data;
-
 /**
 * 数据模型
 */
 @Data
 public class DataModel {
     /**
-    * 是否生成循环
-    */
-    private boolean loop = false;
+     * 是否生成.gitignore文件
+     */
+    public boolean needGit = true;
     /**
-    * 作者注释
-    */
-    private String author = "lpy";
+     * 是否生成循环
+     */
+    public boolean loop = false;
     /**
-    * 输出信息
+    * 核心模板
     */
-    private String outputText = "sum = ";
+    public MainTemplate mainTemplate = new MainTemplate();
+
+    /**
+     * 用于核心模板文件生成
+     */
+
+    @Data
+    public static class MainTemplate{
+        /**
+         * 作者注释
+         */
+        public String author = "lpy";
+        /**
+         * 输出信息
+         */
+        public String outputText = "sum = ";
+    }
 }

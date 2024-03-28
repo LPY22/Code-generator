@@ -122,6 +122,27 @@ flowchart LR
 1. 新建一个抽象父类，创建抽象方法先复制现有方法
 2. 把现有方法里面的每个步骤抽取成一个独立的方法(注意确保每个方法的作用域为protected 且不能为static static表明是类的方法不是对象的方法)
 
+我们之后的目标是 生成Spring Boot模板项目，让开发者快速定制生成自己的
+Spring Boot项目
+
+模板由Spring Boot万用项目模板精简而成，并不保证能够完全正常运行。。。
+通过分析需求，挖掘出生成器应该具备的通用能力。
+1. 替换生成的代码包名，类似于之前的basePackage,但由于会用到包名的地方太多了，如果都要自己制作
+ftl模板，成本高而且容易出现遗漏，要能用工具自动生成模板文件。
+2. 需求：控制是否生成帖子相关功能
+例如PostController,PostService,PostMapper,PostMapper.xml,Post实体类等。
+能力：一个参数同时控制多个文件或多段代码
+3. 控制是否开启跨域，例如corsConfig.java相关文件
+能力：同上
+4. 自定义Knife4jConfig 接口文档配置
+修改Knife4jConfig文件中配置，比如title,description,version,apis
+能力：需要用户输入的参数较多，可以定义一组隔离的配置参数。
+5. 是否开启redis 修改redis相关代码，如application.yml，pom.xml，MainApplication.java
+同上上
+6. 是否开启Elasticsearch,修改相关代码，如PostController,PostService,PostServiceImpl,application.yml,
+PostEsDTO文件是否生成
+
+### 整理清楚之后，就分文别类由易到难增强生成器的功能
 
 
 

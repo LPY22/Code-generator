@@ -1,7 +1,7 @@
 package com.lpy.maker;
 
 import com.lpy.maker.generator.main.GenerateTemplate;
-import com.lpy.maker.generator.main.ZipGenerator;
+import com.lpy.maker.generator.main.MainGenerator;
 import freemarker.template.TemplateException;
 
 import java.io.IOException;
@@ -9,7 +9,8 @@ import java.io.IOException;
 public class Main {
     //这里用作命令行项目的全局调用入口
     public static void main(String[] args) throws TemplateException, IOException, InterruptedException {
-        GenerateTemplate generatorTemplate = new ZipGenerator();
+//        GenerateTemplate generatorTemplate = new ZipGenerator();
+        GenerateTemplate generatorTemplate = new MainGenerator();
         generatorTemplate.doGenerate();
 //直接调用工具完成整个目录的复制生成
 /*        //获取整个项目的根路径

@@ -9,6 +9,7 @@ import com.lpy.maker.meta.enums.FileTypeEnum;
 
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.stream.Collectors;
 
 //定义一个独立的校验类，用于校验字段
 public class MetaValidator {
@@ -32,6 +33,16 @@ public class MetaValidator {
             return;
         }
         for(Meta.ModelConfig.ModelInfo modelInfo: modelInfoList){
+            // 为group的话，不校验
+            String groupKey = modelInfo.getGroupKey();
+            if(StrUtil.isNotEmpty(groupKey)){
+                //生成中间参数 allArgsStr
+                List<Meta.ModelConfig.ModelInfo> subModelInfoList = modelInfo.getModels();
+                String allArgsStr = modelInfo.getModels().stream().map(subModelInfo -> String.format("\"--%s\"", subModelInfo.getFieldName()))
+                        .collect(Collectors.joining(", "));
+                modelInfo.setAllArgsStr(allArgsStr);
+                continue;
+            }
             //输出路径默认值
             String fieldName = modelInfo.getFieldName();
             if(StrUtil.isBlank(fieldName)) throw new MetaException("未填写 fieldname");
@@ -81,6 +92,10 @@ public class MetaValidator {
             return;
         }
         for(Meta.FileConfig.FileInfo fileInfo: fileInfoList){
+            String type1 = fileInfo.getType();
+            if(FileTypeEnum.GROUP.getValue().equals(type1)){
+                continue;
+            }
             //inputPath 必填
             String inputPath = fileInfo.getInputPath();
             if(StrUtil.isBlank(inputPath)){
