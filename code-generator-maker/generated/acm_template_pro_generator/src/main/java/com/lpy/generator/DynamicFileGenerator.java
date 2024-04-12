@@ -31,6 +31,7 @@ public class DynamicFileGenerator {
         //如果文件不存在则创建文件和父目录
         if(!FileUtil.exist(outputPath)){
             FileUtil.touch(outputPath);
+
         }
         //用模板载入数据模型生成文件
         FileOutputStream fileOutputStream = new FileOutputStream(outputPath);

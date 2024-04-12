@@ -78,7 +78,7 @@ public class MetaValidator {
         // outputRootPath: 默认为当前路径下的generator
         String outputRootPath = fileConfig.getOutputRootPath();
         if(StrUtil.isEmpty(outputRootPath)){
-            fileConfig.setOutputRootPath("generator");
+            fileConfig.setOutputRootPath("generated");
         }
 
         String type = fileConfig.getType();

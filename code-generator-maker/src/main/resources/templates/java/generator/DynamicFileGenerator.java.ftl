@@ -30,6 +30,7 @@ public class DynamicFileGenerator {
         Template template = configuration.getTemplate(templateName);
         //如果文件不存在则创建文件和父目录
         if(!FileUtil.exist(outputPath)){
+            System.out.println(outputPath);
             FileUtil.touch(outputPath);
         }
         //用模板载入数据模型生成文件

@@ -2,8 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--对应的mapper接口 namespace=全类名-->
 <mapper namespace="com.yupi.springbootinit.mapper.PostMapper">
-
+<!--id和Result标签 定义了数据库表中的列（column)如何映射到Java对象的属性上（property)-->
     <resultMap id="BaseResultMap" type="com.yupi.springbootinit.model.entity.Post">
         <id property="id" column="id" jdbcType="BIGINT"/>
         <result property="title" column="title" jdbcType="VARCHAR"/>

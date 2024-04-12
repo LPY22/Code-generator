@@ -29,7 +29,8 @@ public class MetaManager {
 
     private static Meta initMeta(){
 //        从JSON文件中把对象属性读入到meta对象中进行初始化
-        String metaJson = ResourceUtil.readUtf8Str("meta.json");
+//        String metaJson = ResourceUtil.readUtf8Str("meta.json");
+        String metaJson = ResourceUtil.readUtf8Str("springboot-init-meta.json");
         Meta newMeta = JSONUtil.toBean(metaJson,Meta.class);
         Meta.FileConfig fileConfig = newMeta.getFileConfig();
         //校验和处理默认值
